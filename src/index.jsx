@@ -8,13 +8,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0
 }
 body {
-    overflow: scroll;
     height: 100%;
 }
 html {
     font-family: ${theme.fontFamily};
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     display: block;
 }
 `;

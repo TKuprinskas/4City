@@ -22,9 +22,9 @@ export const Button = styled.button`
     &:hover {
         background-color: ${({ theme, backgroundColorHover }) =>
             backgroundColorHover ? backgroundColorHover : theme.colors.white};
-        color: ${({ theme }) => theme.colors.orange};
-        border: 1px solid ${({ theme }) => theme.colors.orange};
         transition: all 0.2s ease-in-out;
+        border: ${({ borderHover }) => (borderHover ? borderHover : 'none')};
+        color: ${({ theme, colorHover }) => (colorHover ? colorHover : theme.colors.black)};
     }
 
     @media ${mobile} {

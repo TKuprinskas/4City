@@ -22,7 +22,7 @@ module.exports = {
             resolve: 'gatsby-plugin-page-creator',
             options: {
                 path: path.resolve(__dirname, 'src/pages'),
-                ignore: ['**/sections/*', '**/options/*', '**/elements/*'],
+                ignore: ['**/sections/*', '**/options/*', '**/elements/*', '**/styles/*'],
             },
         },
         {

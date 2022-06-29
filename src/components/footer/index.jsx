@@ -1,45 +1,50 @@
 import React from 'react';
-import { Typography, Box } from 'components';
+import { useQuery } from 'styles/breakpoints';
+import { Typography, Image } from 'components';
 import { FlexWrapper } from 'components/wrappers/FlexWrapper';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { Link } from './styles';
 
-const socialItems = [
-    {
-        name: 'Facebook',
-        link: 'https://www.facebook.com/',
-        icon: <FaFacebookF color="white" size={20} />,
-    },
-    {
-        name: 'Twitter',
-        link: 'https://www.twitter.com/',
-        icon: <FaTwitter color="white" size={20} />,
-    },
-    {
-        name: 'Instagram',
-        link: 'https://www.instagram.com/',
-        icon: <FaInstagram color="white" size={20} />,
-    },
-];
+export const Footer = () => {
+    const { isTablet } = useQuery();
 
-export const Footer = () => (
-    <FlexWrapper backgroundColor="orange" padding="0.75rem" justifyContent="center">
-        <Typography type="body16" color="white">
-            © 2022 Teniso Partneris. Powered by TKuprinskas
-        </Typography>
+    return (
         <FlexWrapper
-            width={{ _: '5%', mobile: '30%' }}
+            backgroundColor="mintGreen"
+            padding="0.75rem"
             alignItems="center"
-            justifyContent="space-between"
-            margin={{ _: '0 3.125rem', mobile: '0 0.625rem' }}
+            justifyContent="center"
+            flexDirection="column"
         >
-            {socialItems.map((item) => {
-                const { name, link, icon } = item;
-                return (
-                    <Box key={name}>
-                        <a href={link}>{icon}</a>
-                    </Box>
-                );
-            })}
+            <FlexWrapper
+                margin="0.5rem 0"
+                borderBottom="1px solid white"
+                flexDirection={isTablet ? 'column' : ''}
+                alignItems="center"
+            >
+                <FlexWrapper alignItems="center" margin={isTablet ? '0 0 1rem 0' : '0 2rem'}>
+                    <Link href="tel:+370 65860073">
+                        <Typography type="body16" color="white">
+                            +370 658 60073
+                        </Typography>
+                    </Link>
+                </FlexWrapper>
+                <Image src="logo" alt="logo" width="100%" style={{ cursor: 'pointer' }} />
+                <FlexWrapper alignItems="center" margin={isTablet ? '1rem 0 0.5rem 0' : '0 2rem'}>
+                    <Link href="mailto:info@4city.lt">
+                        <Typography type="body16" color="white">
+                            info@4city.lt
+                        </Typography>
+                    </Link>
+                </FlexWrapper>
+            </FlexWrapper>
+            <FlexWrapper flexDirection="column" justifyContent="center" alignItems="center">
+                <Typography type="body16" color="white">
+                    © 2022 4City
+                </Typography>
+                <Typography type="body16" color="white">
+                    Visos teisės saugomos
+                </Typography>
+            </FlexWrapper>
         </FlexWrapper>
-    </FlexWrapper>
-);
+    );
+};
