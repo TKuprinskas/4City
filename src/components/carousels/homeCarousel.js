@@ -3,7 +3,7 @@ import { StyledCarousel } from './styles';
 import { Image } from 'components';
 
 const HomeCarousel = () => (
-    <StyledCarousel autoPlay infiniteLoop="true">
+    <StyledCarousel autoPlay infiniteLoop={true} showThumbs={false}>
         <div>
             <Image src="img1" alt="img1" />
         </div>
