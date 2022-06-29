@@ -16,14 +16,11 @@ export const Header = () => {
     return (
         <div className="navContainer">
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">
-                    <div className="logo">
-                        <Link to="/">
-                            {' '}
-                            <Image src="logo" alt="logo"></Image>
-                        </Link>
-                    </div>
-                </h1>
+                <div className="navbar-logo">
+                    <Link to="/">
+                        <Image src="logo" alt="logo"></Image>
+                    </Link>
+                </div>
                 <div className="menu-icon" onClick={handleClick}>
                     {clicked ? <IoMdClose color="white" /> : <GiHamburgerMenu color="white" />}
                 </div>

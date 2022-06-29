@@ -29,9 +29,21 @@ export const HeroTitle = styled.div`
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    p:first-child {
+        font-size: 2vw;
+    }
+    p:last-child {
+        font-size: 0.75vw;
+    }
     @media ${tablet} {
         width: 100%;
         height: 400px;
+        p:first-child {
+            font-size: 5vw;
+        }
+        p:last-child {
+            font-size: 2vw;
+        }
     }
 `;
 
@@ -76,6 +88,9 @@ export const PaslaugosItem = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    p {
+        font-size: 1vw;
+    }
     img {
         float: left;
         object-fit: cover;
@@ -89,6 +104,9 @@ export const PaslaugosItem = styled.div`
         img {
             width: 120px;
             height: 120px;
+        }
+        p {
+            font-size: 3vw;
         }
     }
 `;
@@ -126,5 +144,22 @@ export const About = styled.div`
         flex-direction: column;
         align-items: center;
         text-align: justify;
+    }
+`;
+
+export const ImgWrapper = styled.div`
+    width: 35%;
+    margin-left: 2rem;
+    @media ${tablet} {
+        width: 70%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+`;
+
+export const TextWrapper = styled.div`
+    width: 65%;
+    @media ${tablet} {
+        width: 100%;
     }
 `;

@@ -28,12 +28,7 @@
     align-items: center;
 }
 
-.logo {
-    margin-top: 0.5rem;
-    margin-left: 12px;
-}
-
-.logo img {
+.navbar-logo img {
     height: 4rem;
 }
 
@@ -132,14 +127,7 @@
     .navbar-logo {
         position: absolute;
         align-items: center;
-        top: -25px;
-        left: 0;
-        transform: translate(25%, 50%);
-    }
-
-    .logo {
-        margin-top: 0.5rem;
-        margin-left: 0;
+        left: 3%;
     }
 
     .menu-icon {
