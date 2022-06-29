@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Typography, Header } from 'components';
 import { useQuery } from 'styles/breakpoints';
 import video from 'assets/video/video.mp4';
-import { HeroCover, About, HeroTitle } from './styles';
+import { HeroCover, Video, HeroTitle, About } from './styles';
 
 const Home = () => {
     const { isTablet } = useQuery();
@@ -19,9 +19,9 @@ const Home = () => {
             </Helmet>
             <Header />
             <HeroCover>
-                <video autoPlay loop muted playsInline>
+                <Video autoPlay loop muted playsInline>
                     <source type="video/mp4" src={video} />
-                </video>
+                </Video>
                 <HeroTitle>
                     <Typography
                         type="h1"
@@ -39,6 +39,48 @@ const Home = () => {
                     </Typography>
                 </HeroTitle>
             </HeroCover>
+            <About>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit. Id eveniet provident
+                    voluptatem alias sapiente. Quia incidunt ducimus amet dolores reiciendis quibusdam repudiandae. Quam
+                    nemo numquam fugiat neque totam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit. Id eveniet provident
+                    voluptatem alias sapiente. Quia incidunt ducimus amet dolores reiciendis quibusdam repudiandae. Quam
+                    nemo numquam fugiat neque totam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit. Id eveniet provident
+                    voluptatem alias sapiente. Quia incidunt ducimus amet dolores reiciendis quibusdam repudiandae. Quam
+                    nemo numquam fugiat neque totam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit. Id eveniet provident
+                    voluptatem alias sapiente. Quia incidunt ducimus amet dolores reiciendis quibusdam repudiandae. Quam
+                    nemo numquam fugiat neque totam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit. Id eveniet provident
+                    voluptatem alias sapiente. Quia incidunt ducimus amet dolores reiciendis quibusdam repudiandae. Quam
+                    nemo numquam fugiat neque totam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit. Id eveniet provident
+                    voluptatem alias sapiente. Quia incidunt ducimus amet dolores reiciendis quibusdam repudiandae. Quam
+                    nemo numquam fugiat neque totam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit. Id eveniet provident
+                    voluptatem alias sapiente. Quia incidunt ducimus amet dolores reiciendis quibusdam repudiandae. Quam
+                    nemo numquam fugiat neque totam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, suscipit. Id eveniet provident
+                    voluptatem alias sapiente. Quia incidunt ducimus amet dolores reiciendis quibusdam repudiandae. Quam
+                    nemo numquam fugiat neque totam.
+                </p>
+            </About>
         </>
     );
 };
